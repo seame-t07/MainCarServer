@@ -1,3 +1,6 @@
 [submodule "Controller"]
 	path = Controller
 	url = git@github.com:seame-t07/ControllerClass.git
+[submodule "CANBus"]
+	path = CANBus
+	url = git@github.com:seame-t07/CANBusClass.git
