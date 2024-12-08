@@ -1,0 +1,19 @@
+#include "JetSnailsCar.hpp"
+#include <thread>
+
+int main() {
+
+
+    JetSnailsCar delorean;
+
+    Controller controller;
+    
+    delorean.setController(&controller);
+
+    while(1) {
+        std::thread drive(&JetSnailsCar::drive, &delorean);
+        drive.join();
+    }
+
+    return 0;
+}
