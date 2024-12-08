@@ -4,12 +4,12 @@
 
 int main() {
 
-    CANBus canBus("/dev/vcan0", 500000);
-    
+    CANBus canBus("vcan0", 500000);
+    Controller controller;
     JetSnailsCar delorean;
 
-    Controller controller;
     delorean.setController(&controller);
+
 
     while(1) {
         std::thread drive(&JetSnailsCar::drive, &delorean);
