@@ -2,6 +2,7 @@
 
 #include "ACar.hpp"
 #include "Controller.hpp"
+#include "devices.hpp"
 #include "CANBus.hpp"
 
 #include <vector>
