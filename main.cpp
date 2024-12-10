@@ -8,6 +8,9 @@ int main() {
     Controller controller;
     JetSnailsCar delorean;
 
+    CANBus canBus("can0", 500000);
+    ISensor* speedSensor = new SpeedSensor(canBus, 0x100);
+
     Actions buzzer;
     buzzer.onPress = activate_buzzer;
     buzzer.onRelease = deactivate_buzzer;

@@ -3,6 +3,8 @@
 #include "ACar.hpp"
 #include "Controller.hpp"
 #include "devices.hpp"
+#include "ISensor.hpp"
+#include "SpeedSensor.hpp"
 //#include "CANBus.hpp"
 
 #include <vector>
