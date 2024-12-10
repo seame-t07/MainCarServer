@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Include the submodule as a subdirectory
 add_subdirectory(Controller)
 add_subdirectory(Sensors)
+add_subdirectory(Sensors/CANBus)
 
 # Specify include directories for MainCar
 include_directories(MainCar/includes)
@@ -31,6 +32,6 @@ add_executable(${PROJECT_NAME} ${MAINCAR_SOURCES})
 
 # Link the Controller library to the executable
 target_link_libraries(${PROJECT_NAME} PRIVATE Controller)
-target_link_libraries(${PROJECT_NAME} PRIVATE Sensors)
-target_link_libraries(${PROJECT_NAME} PRIVATE Sensors/CANBus)
+target_link_libraries(${PROJECT_NAME} PRIVATE SpeedSensorLib)
+target_link_libraries(${PROJECT_NAME} PRIVATE CANBus)
 
