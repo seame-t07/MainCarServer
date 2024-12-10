@@ -10,7 +10,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Include the submodule as a subdirectory
 add_subdirectory(Controller)
 add_subdirectory(Sensors)
-add_subdirectory(Sensors/CANBus)
 
 # Specify include directories for MainCar
 include_directories(MainCar/includes)

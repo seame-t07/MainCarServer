@@ -3,17 +3,20 @@
 #include <thread>
 
 void sensorsThreads(ISensor* sensor) {
-    while(1)
+	
+    int exit = 0;
+    while(exit <= 10)
     {
-        sensor->read();
+        sensor->readData();
         std::cout << "Value from sensor: " << sensor->getType() << ": " << sensor->getValue() << std::endl;
+	exit++;
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
 
 int main() {
 
-    // CANBus canBus("vcan0", 500000);
+    // CANBus canBus("can0", 500000);
     Controller controller;
     JetSnailsCar delorean;
 
