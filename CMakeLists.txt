@@ -9,19 +9,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Include the submodule as a subdirectory
 add_subdirectory(Controller)
-# add_subdirectory(CANBus)
 
 # Specify include directories for MainCar
 include_directories(MainCar/includes)
-include_directories(MainCar/Devices/includes)
-include_directories(Controller/includes)  # Include Controller's headers
-include_directories(Devices/includes)  # Include Controller's headers
-# include_directories(CANBus/includes)  # Include Controller's headers
+include_directories(Devices/includes)
+include_directories(Controller/includes)
 
 # Define the source files for MainCar
 set(MAINCAR_SOURCES
     MainCar/sources/ACar.cpp
     MainCar/sources/JetSnailsCar.cpp
+    Devices/sources/devices.cpp
     main.cpp
 )
 
@@ -31,8 +29,3 @@ add_executable(${PROJECT_NAME} ${MAINCAR_SOURCES})
 # Link the Controller library to the executable
 target_link_libraries(${PROJECT_NAME} PRIVATE Controller)
 
-# Link the CANBus library to the executable
-# target_link_libraries(${PROJECT_NAME} PRIVATE CANBus)
-
-# Optional: Installation (if needed)
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)
