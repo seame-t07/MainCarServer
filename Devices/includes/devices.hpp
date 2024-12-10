@@ -20,3 +20,6 @@ void setServoAngle(int angle);
 void setMotorSpeed(int speed);
 void initializeMotors();
 void initializeServo();
+
+void steering(int value);
+void throttle(int value);

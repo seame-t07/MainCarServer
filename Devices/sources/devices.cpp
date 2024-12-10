@@ -22,6 +22,14 @@ void deactivate_buzzer() {
     std::cout << "Buzzer turned off." << std::endl;
 }
 
+void steering(int value) {
+    std::cout << "Steering: " << value << std::endl;
+}
+
+void throttle(int value) {
+    std::cout << "Throttle: " << value << std::endl;
+}
+
 // int main() {
 //     try {
 //         initMotorController();

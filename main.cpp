@@ -13,6 +13,9 @@ int main() {
     buzzer.onRelease = deactivate_buzzer;
     controller.setButtonAction(SDL_CONTROLLER_BUTTON_A, buzzer);
 
+    controller.setAxisAction(SDL_CONTROLLER_AXIS_LEFTX, steering);
+    controller.setAxisAction(SDL_CONTROLLER_AXIS_RIGHTY, throttle);
+
     delorean.setController(&controller);
     
 //    if (gpioInitialise() < 0) {
