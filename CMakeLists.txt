@@ -8,12 +8,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Include the submodule as a subdirectory
-add_subdirectory(Controller)
 add_subdirectory(Sensors)
 
 # Specify include directories for MainCar
 include_directories(MainCar/includes)
-include_directories(Devices/includes)
 include_directories(Controller/includes)
 include_directories(Sensors/includes)
 include_directories(Sensors/CANBus/includes)
@@ -22,7 +20,6 @@ include_directories(Sensors/CANBus/includes)
 set(MAINCAR_SOURCES
     MainCar/sources/ACar.cpp
     MainCar/sources/JetSnailsCar.cpp
-    Devices/sources/devices.cpp
     main.cpp
 )
 
