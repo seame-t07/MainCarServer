@@ -37,6 +37,18 @@ void JetSnailsCar::setSpeedSensor(SpeedSensor *speedSensor) {
      _speedSensor = speedSensor;
 }
 
+void JetSnailsCar::setParkSensor(ParkSensor *parkSensor) {
+     _parkSensor = parkSensor;
+}
+
+float JetSnailsCar::getSpeed() const {
+    return _speedSensor->getValue();
+}
+
+float JetSnailsCar::getDistance() const {
+    return _parkSensor->getValue();
+}
+
 // Operator overload
 JetSnailsCar& JetSnailsCar::operator=(const JetSnailsCar& original) {
     if (this != &original) {

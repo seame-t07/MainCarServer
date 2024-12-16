@@ -26,7 +26,11 @@ class JetSnailsCar : public ACar {
         void printParts() const;
         void printSensors() const;
 
-	void setSpeedSensor(SpeedSensor *speedSensor);
+	    void setSpeedSensor(SpeedSensor *speedSensor);
+        void setParkSensor(ParkSensor *parkSensor);
+
+        float getSpeed() const;
+        float getDistance() const;
 };
 
 std::ostream &  operator<<( std::ostream & o, JetSnailsCar & i );
