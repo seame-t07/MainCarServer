@@ -16,8 +16,8 @@ int main() {
 
     while(1)
     {
-        delorean.getSpeed();
-        delorean.getDistance();
+	std::cout << delorean.getSpeed() << std::endl;
+	std::cout << delorean.getDistance() << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
     

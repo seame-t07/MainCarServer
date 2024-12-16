@@ -37,8 +37,9 @@ echo "Check and installation complete!"
 sudo ip link set can0 type can bitrate 500000
 sudo ip link set can0 up
 
-git submodule update --init --recursive
 git submodule sync --recursive
+git submodule update --init --recursive
+git submodule update --recursive --remote
 
 cmake -S . -B build
 cd build
