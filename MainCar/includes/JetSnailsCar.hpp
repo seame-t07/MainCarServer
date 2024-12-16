@@ -1,10 +1,9 @@
 #pragma once
 
 #include "ACar.hpp"
-#include "Controller.hpp"
-#include "devices.hpp"
 #include "ISensor.hpp"
 #include "SpeedSensor.hpp"
+#include "ParkSensor.hpp"
 //#include "CANBus.hpp"
 
 #include <vector>
@@ -13,7 +12,8 @@
 class JetSnailsCar : public ACar {
     private:
         int _maxSpeed;
-        Controller *_controller;
+	SpeedSensor *_speedSensor;
+	ParkSensor *_parkSensor;
 
     public:
         JetSnailsCar();
@@ -26,7 +26,7 @@ class JetSnailsCar : public ACar {
         void printParts() const;
         void printSensors() const;
 
-        void setController(Controller *controller);
+	void setSpeedSensor(SpeedSensor *speedSensor);
 };
 
 std::ostream &  operator<<( std::ostream & o, JetSnailsCar & i );

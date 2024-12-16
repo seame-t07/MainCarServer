@@ -21,7 +21,7 @@ JetSnailsCar::~JetSnailsCar() {
 
 // Member function
 void JetSnailsCar::drive() const {
-    _controller->listen();
+    ;
 }
 
 void JetSnailsCar::printParts(void) const {
@@ -33,12 +33,8 @@ void JetSnailsCar::printSensors(void) const {
 }
 
 
-// void JetSnailsCar::setSpeedSensor(SpeedSensor *speedSensor) {
-//     _speedSensor = speedSensor;
-// }
-
-void JetSnailsCar::setController(Controller *controller) {
-    _controller = controller;
+void JetSnailsCar::setSpeedSensor(SpeedSensor *speedSensor) {
+     _speedSensor = speedSensor;
 }
 
 // Operator overload
