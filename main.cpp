@@ -16,9 +16,10 @@ int main() {
 
     while(1)
     {
-	std::cout << delorean.getSpeed() << std::endl;
-	std::cout << delorean.getDistance() << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	speedSensor->readData();
+	parkSensor->readData();
+	std::cout << "Speed: " << speedSensor->getValue() << std::endl;
+	std::cout << "Distance: " << parkSensor->getValue() << std::endl;
     }
     
     return 0;
