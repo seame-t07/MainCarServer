@@ -13,7 +13,7 @@ int main() {
 
     delorean.setSpeedSensor((SpeedSensor*)speedSensor);
     delorean.setParkSensor((ParkSensor*)parkSensor);
-
+    std::cout << "Starting car\n";
     while(1)
     {
 	speedSensor->readData();
